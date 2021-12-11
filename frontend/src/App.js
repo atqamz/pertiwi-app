@@ -41,7 +41,7 @@ import UserList from "./components/Admin/User/UserList";
 import UserUpdate from "./components/Admin/User/UserUpdate";
 
 function App() {
-  ReactGA.initialize(process.env.GA_TRACKING_ID);
+  ReactGA.initialize("UA-215036295-1");
 
   const { loading, user, isAuth } = useSelector((state) => state.userState);
 

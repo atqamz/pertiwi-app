@@ -1,16 +1,13 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { withRouter } from "react-router-dom";
 import ReactGA from "react-ga";
-const RouteChangeTracker = () => {
-  const location = useLocation();
-  useEffect(
-    function () {
-      const path = location.pathname + location.search;
-      ReactGA.set({ page: path });
-      ReactGA.pageview(path);
-    },
-    [location]
-  );
-  return "";
+const RouteChangeTracker = ({ history }) => {
+  history.listen((location, action) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
+
+  return <div></div>;
 };
-export default RouteChangeTracker;
+
+export default withRouter(RouteChangeTracker);
