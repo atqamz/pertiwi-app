@@ -89,12 +89,18 @@
 .copyrightFooter {
   width: 100%;
   padding: 1rem 5%;
-  background: #fff;
+  background: #808000;
+  color: #fff;
 }
 .copyrightFooter > p {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: Nunito Sans;
+  font-size: 1.2rem;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.04em;
 }
 .copyrightFooter > p > svg {
   margin-right: 10px;

@@ -116,8 +116,8 @@ const ProductList = ({ history }) => {
     const form = new FormData();
 
     form.set("name", product.name);
-    form.set("description", product.description);
-    form.set("ingredient", product.ingredient);
+    form.set("description", JSON.stringify(product.description));
+    form.set("ingredient", JSON.stringify(product.ingredient));
     form.set("productTypes", JSON.stringify(productTypes));
 
     images.forEach((image) => {

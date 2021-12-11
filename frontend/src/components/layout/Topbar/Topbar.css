@@ -34,10 +34,10 @@ nav > ul {
   padding: 0 10%;
   width: 100%;
 }
-nav li {
+nav > ul > li {
   list-style: none;
 }
-nav li > a {
+nav > ul > li > a {
   font-family: Oswald;
   font-weight: 500;
   font-size: 1rem;
@@ -48,10 +48,52 @@ nav li > a {
   transition: color 0.5s;
 }
 
-nav li > a:hover,
-nav li > a.active {
+nav > ul > li > a:hover,
+nav > ul > li > a.active {
   color: #fff075;
   border-bottom: 3px solid #fff075;
+}
+
+.help {
+  position: relative;
+}
+
+.helpList {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50px;
+  background: #ffffff;
+  box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.05), 0px 5px 16px rgba(0, 0, 0, 0.035);
+  border-radius: 5px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.helpList.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.helpList li {
+  width: 100%;
+  list-style: none;
+  padding: 0.3rem 0;
+}
+
+.helpList li > a {
+  padding: 0.5rem;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #636363;
+  text-decoration: none;
 }
 
 .topbarShortcut {

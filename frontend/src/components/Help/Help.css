@@ -1,0 +1,121 @@
+.helpPage {
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.2) 12.4%,
+    rgba(128, 128, 0, 0) 100%
+  );
+}
+
+.helpContainer {
+  padding: 3% 5%;
+}
+.helpContainer > h2 {
+  font-family: Oswald;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 47px;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+.helpContainer > h1 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 76px;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.helpSection {
+  padding: 3% 3% 0 3%;
+}
+
+.helpSectionHeader {
+  background: #f7f7ef;
+  padding: 0.5rem 1rem;
+}
+.helpSectionHeader > h1 {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 47px;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.helpSection > h3 {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+
+.helpSection hr {
+  margin: 1rem 0;
+}
+
+.helpSection > ul {
+  margin-left: 3rem;
+}
+
+.helpSection > ul li:nth-child(1) {
+  font-family: Nunito Sans;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+.helpSection > ul li:nth-child(2) {
+  list-style-type: none;
+  font-family: Myanmar Text;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.helpSection.shipping > ul li {
+  font-family: Myanmar Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.productReturnTerm li {
+  color: #800000 !important;
+}
+.productReturnTerm div {
+  color: #800000 !important;
+  display: flex;
+  justify-content: space-around;
+}
+.productReturnTerm img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 0.5rem;
+}
+.productReturnTerm div > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  font-family: Myanmar Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.productReturnTerm div:last-child > p {
+  flex: 50%;
+}

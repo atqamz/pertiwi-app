@@ -19,6 +19,9 @@ import UpdatePassword from "./components/Auth/UpdatePassword/UpdatePassword";
 import Home from "./components/Home/Home";
 import Product from "./components/Product/Product";
 import ProductDetail from "./components/Product/ProductDetail";
+import About from "./components/About/About";
+import ProductsHelp from "./components/Help/ProductsHelp";
+import ShippingHelp from "./components/Help/ShippingHelp";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
 import CreateOrder from "./components/Order/CreateOrder";
@@ -53,6 +56,20 @@ function App() {
           path='/product/:productId'
           component={ProductDetail}
           metadata='Product'
+        />
+
+        <PublicRoute exact path='/about' component={About} metadata='About Us' />
+        <PublicRoute
+          exact
+          path='/help/products'
+          component={ProductsHelp}
+          metadata='Help'
+        />
+        <PublicRoute
+          exact
+          path='/help/shipping'
+          component={ShippingHelp}
+          metadata='Help'
         />
 
         <PublicRoute path='/cart' component={Cart} metadata='Cart' />

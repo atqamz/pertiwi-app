@@ -1,0 +1,65 @@
+.aboutPage {
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.2) 12.4%,
+    rgba(128, 128, 0, 0) 100%
+  );
+}
+
+.aboutPage h1 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 47px;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.aboutContainer {
+  padding: 3% 5%;
+}
+
+.storyContainer {
+  padding: 3% 3% 0 3%;
+}
+
+.storyContainer hr {
+  margin: 1rem 0;
+}
+
+.storyHeader {
+  background: #f7f7ef;
+  padding: 0.5rem 1rem;
+}
+
+.storyDetail {
+  display: flex;
+  align-items: center;
+  padding: 3%;
+}
+
+.storyDetail > img {
+  width: 120px;
+  height: 120px;
+}
+
+.storyDetail > ul {
+  margin-left: 3rem;
+}
+
+.storyDetail > ul li:first-child {
+  font-family: Nunito Sans;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+.storyDetail > ul li:last-child {
+  list-style-type: none;
+  font-family: Myanmar Text;
+  font-size: 1.1rem;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}

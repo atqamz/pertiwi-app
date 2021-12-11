@@ -2,14 +2,17 @@ import "./Topbar.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, ShoppingCart } from "@mui/icons-material";
+import { useLocation } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
 import UserOption from "../UserOption/UserOption";
 
 const Topbar = ({ user, isAuth }) => {
+  const location = useLocation();
   const { cartItems } = useSelector((state) => state.cartState);
   const [open, setOpen] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
 
   return (
     <nav>
@@ -30,8 +33,22 @@ const Topbar = ({ user, isAuth }) => {
         <li>
           <Link to='/about'>About</Link>
         </li>
-        <li>
-          <Link to='/help'>Help</Link>
+        <li className='help'>
+          <Link to={location.pathname} onClick={() => setHelpOpen(!helpOpen)}>
+            Help
+          </Link>
+          <ul
+            className={`helpList ${helpOpen && "active"}`}
+            onClick={() => setHelpOpen(!helpOpen)}
+            onMouseLeave={() => setHelpOpen(false)}
+          >
+            <li>
+              <Link to='/help/products'>Products</Link>
+            </li>
+            <li>
+              <Link to='/help/shipping'>Shipping</Link>
+            </li>
+          </ul>
         </li>
       </ul>
       <div className='topbarShortcut'>
