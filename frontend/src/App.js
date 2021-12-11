@@ -1,10 +1,13 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import ReactGA from "react-ga";
 
 import store from "./store";
 import { getUser } from "./_actions/userAction";
 import { useSelector } from "react-redux";
+
+import RouteChangeTracker from "./RouteChangeTracker";
 
 import PublicRoute from "./components/PublicRoute";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -38,13 +41,17 @@ import UserList from "./components/Admin/User/UserList";
 import UserUpdate from "./components/Admin/User/UserUpdate";
 
 function App() {
+  ReactGA.initialize(process.env.GA_TRACKING_ID);
+
   const { loading, user, isAuth } = useSelector((state) => state.userState);
+
   useEffect(() => {
     store.dispatch(getUser());
   }, []);
 
   return (
     <Router>
+      <RouteChangeTracker />
       <Switch>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
