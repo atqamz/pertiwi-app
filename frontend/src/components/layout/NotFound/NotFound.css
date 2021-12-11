@@ -1,0 +1,89 @@
+.notFoundPage {
+  height: 100vmin;
+  width: 100vw;
+  max-width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.16) -3.21%,
+    rgba(128, 128, 0, 0) 54.13%
+  );
+}
+.notFoundPage::after {
+  content: "";
+  width: 100vw;
+  height: 100vmin;
+  background: #d9d9b9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  z-index: -1;
+
+  clip-path: polygon(0 82%, 100% 58%, 100% 100%, 0% 100%);
+}
+
+.notFoundHeader {
+  display: flex;
+  padding: 20px 10vmax;
+}
+.notFoundHeader > img {
+  height: 40px;
+  margin: 0 10px;
+}
+
+.notFoundLeaf {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+.notFoundLeaf > img:first-child {
+  width: 5vmax;
+}
+.notFoundLeaf > img:last-child {
+  width: 7vmax;
+  margin-left: auto;
+}
+
+.notFoundContainer {
+  height: calc(100vmin - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.notFoundContainer h1,
+.notFoundContainer h2 {
+  font-family: "Oswald";
+}
+.notFoundContainer h1 {
+  font-size: 5rem;
+}
+.notFoundContainer h2 {
+  font-size: 2rem;
+}
+.notFoundContainer p {
+  font-family: "Nunito Sans";
+  color: #636363;
+}
+.notFoundContainer img {
+  width: 40vmax;
+}
+
+@media screen and (max-width: 768px) {
+  .notFoundHeader {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .notFoundPage::after {
+    display: none;
+  }
+
+  .notFoundContainer {
+    height: 80vh;
+  }
+  .notFoundContainer img {
+    display: none;
+  }
+}

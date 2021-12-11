@@ -1,0 +1,130 @@
+.productDetailPage {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.16) -8.01%,
+    rgba(128, 128, 0, 0) 100%
+  );
+}
+
+.productDetailPage > div {
+  flex: 50%;
+}
+
+.productDetailSlider {
+  text-align: center;
+}
+.productDetailSlider img {
+  border-radius: 20px;
+}
+.imagesIndicator {
+  color: none !important;
+  background: none !important;
+}
+.imagesIndicator > img {
+  width: 75px;
+  height: 75px;
+  margin: 1rem;
+}
+
+.productAccordion {
+  box-shadow: none !important;
+}
+.productAccordion::before {
+  height: 0 !important;
+}
+.productAccordion .MuiAccordionSummary-root {
+  background: rgba(165, 127, 129, 0.11) !important;
+}
+
+.productDetail hr {
+  margin: 10px 0;
+  border-top: 1px solid #a57f81;
+}
+
+.productDetail > h1 {
+  font-family: Oswald;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.productDetail > h2 {
+  font-family: Oswald;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #2f7550;
+}
+
+.productInteract > div {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.productInteract > div > label {
+  font-family: Nunito Sans;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: #636363;
+  padding: 5px;
+}
+
+.productInteract > div > select {
+  width: 100%;
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: #636363;
+  outline: none !important;
+  border: 1px solid #acacac;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.productQty {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.productQty > input {
+  background: none;
+  border: none;
+  cursor: default;
+  width: 2rem;
+  text-align: center;
+  outline: none;
+  font-family: Oswald;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.addToCartBtn {
+  margin-bottom: 2rem !important;
+  border: none !important;
+  background: #808000 !important;
+  color: white !important;
+  font-family: Raleway !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  transition: all 0.5s !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  border: 1px solid #808000 !important;
+  padding: 0.5rem 1.7rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.addToCartBtn:hover {
+  background: none !important;
+  color: #808000 !important;
+  border-radius: 5px !important;
+}

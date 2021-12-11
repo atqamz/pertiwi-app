@@ -1,0 +1,97 @@
+.authPage {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+}
+
+.authContainer {
+  flex: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.16) -3.21%,
+    rgba(128, 128, 0, 0) 54.13%
+  );
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.authCTA {
+  padding: 1rem 5rem;
+  text-align: right;
+}
+.authCTA > p {
+  font-family: Nunito Sans;
+  letter-spacing: 0.04em;
+  color: #636363;
+}
+.authCTA a {
+  font-family: Raleway;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #808000;
+}
+
+.authBox {
+  padding: 10% 20%;
+}
+.authBox > h1 {
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.authBox > p {
+  font-family: Nunito Sans;
+  letter-spacing: 0.04em;
+  color: #636363;
+}
+
+.authForm {
+  margin: 1rem 0;
+}
+.authFormInput {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.authFormInput > label {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+.authFormInput > input {
+  font-family: Nunito Sans;
+  letter-spacing: 0.04em;
+  color: #acacac;
+  border-radius: 5px;
+  padding: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  font-size: 1rem;
+}
+
+.registerPassword {
+  display: flex;
+}
+.registerPassword > div {
+  flex: 50%;
+}
+.registerPassword > div:first-child {
+  margin-right: 10px;
+}
+.registerPassword > div:last-child {
+  margin-left: 10px;
+}
+
+#submitBtn {
+  font-family: Raleway;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #808000;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}

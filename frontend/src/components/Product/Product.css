@@ -1,0 +1,92 @@
+.productPage {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.16) -8.01%,
+    rgba(128, 128, 0, 0) 100%
+  );
+}
+
+.productContainer {
+  padding: 2% 5%;
+}
+.productContainer > h1 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.productSlider {
+  margin: 3%;
+}
+
+.productDetailSlider img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.productSlider .slick-prev:before,
+.productSlider .slick-next:before {
+  color: #636363;
+}
+
+.productSliderContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.productCard {
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.productCard:hover {
+  box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.05), 0px 5px 16px rgba(0, 0, 0, 0.035);
+}
+.productCard > img {
+  border-radius: 5px;
+  width: 250px;
+  height: 250px;
+  object-fit: scale-down;
+}
+.productCard > h2 {
+  font-family: Oswald;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.productCard > p {
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #2f7550;
+}
+
+.goToProductBtn {
+  margin-top: 3rem !important;
+  border: none !important;
+  background: #808000 !important;
+  color: white !important;
+  font-family: Raleway !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  transition: all 0.5s !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  border: 1px solid #808000 !important;
+  padding: 0.5rem 1.7rem !important;
+}
+.goToProductBtn:hover {
+  background: none !important;
+  color: #808000 !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+}

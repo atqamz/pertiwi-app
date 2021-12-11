@@ -1,0 +1,42 @@
+.sideview {
+  max-width: 100%;
+  height: 100vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.sideview > img {
+  width: 70vmin;
+}
+
+.sideviewLeaf {
+  width: 101vmin;
+  display: flex;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.sideviewLeaf > img:first-child {
+  height: 100px;
+}
+.sideviewLeaf > img:last-child {
+  width: 7vmax;
+  margin-left: auto;
+}
+
+.sideviewHeader {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 30px;
+}
+.sideviewHeader img {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .sideview {
+    display: none;
+  }
+}

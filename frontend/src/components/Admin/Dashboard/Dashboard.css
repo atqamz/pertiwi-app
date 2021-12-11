@@ -1,0 +1,43 @@
+.dashboardContainer {
+  padding: 3%;
+}
+.dashboardContainer h1 {
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.dashboardInfo {
+  display: flex;
+}
+
+.dashboardInfoPanel {
+  width: 100%;
+  padding: 2.5rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(247, 247, 239, 0.47);
+  border-radius: 5px;
+}
+.dashboardInfoPanel > img {
+  width: 80px;
+  margin-right: 20px;
+}
+.dashboardInfoPanel p {
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #636363;
+}
+.dashboardInfoPanel h3 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+
+  color: #1a1a1a;
+}

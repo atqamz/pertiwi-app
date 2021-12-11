@@ -1,0 +1,104 @@
+.shippingForm {
+  padding: 2% 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.16) -3.21%,
+    rgba(128, 128, 0, 0) 54.13%
+  );
+  display: flex;
+  font-family: Nunito Sans;
+  font-weight: 800;
+}
+
+.shippingForm > div {
+  padding: 0 3%;
+}
+
+.shippingForm > div:first-child {
+  flex: 65%;
+  border-right: 3px solid #808000;
+}
+.shippingForm > div:last-child {
+  flex: 35%;
+}
+
+.shippingForm > div > h1 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.twoInput {
+  display: flex;
+}
+.twoInput > .shippingFormInput {
+  flex: 50%;
+}
+.twoInput > .shippingFormInput:first-child {
+  margin-right: 0.5rem;
+}
+.twoInput > .shippingFormInput:last-child {
+  margin-left: 0.5rem;
+}
+
+.shippingFormInput {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.shippingFormInput > label {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+.shippingFormInput > input,
+.shippingFormInput > select {
+  font-family: Nunito Sans;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  border-radius: 5px;
+  padding: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  background: none;
+  transition: all 0.5s;
+  font-size: 1rem;
+}
+.shippingFormInput > input:disabled::placeholder,
+.shippingFormInput > select:disabled {
+  color: white !important;
+}
+
+.shippingBtn {
+  width: 100%;
+  background: #808000;
+  border-radius: 5px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 1px solid #808000;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  margin-top: 1rem;
+}
+
+.shippingBtn:hover {
+  background: none;
+  color: #808000;
+}
+
+.shippingBtn:disabled {
+  background: none;
+  color: white;
+}

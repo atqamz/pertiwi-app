@@ -1,0 +1,165 @@
+.productsTab {
+  color: #808000 !important;
+}
+.productsTabItem {
+  font-family: Oswald !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+.productsTabItem.Mui-selected {
+  color: #808000 !important;
+}
+.MuiTabs-indicator {
+  background: #808000 !important;
+}
+
+.productsTabPanel {
+  background: rgba(247, 247, 239, 0.47);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.productListTable {
+  background-color: white;
+  border: none !important;
+}
+.productListTable div {
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #636363;
+  border: none !important;
+}
+.productListTable .MuiDataGrid-columnHeader {
+  background: #f1ece8 !important;
+}
+
+.addProductForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.addProductForm > div {
+  display: flex;
+}
+
+.productFormLeft,
+.productFormRight {
+  flex: 50%;
+}
+.productFormLeft {
+  margin-right: 1rem;
+}
+
+.productFormInput {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.productFormInput > label {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+.productFormInput > input,
+.productFormInput > textarea {
+  font-family: Nunito Sans;
+  letter-spacing: 0.04em;
+  color: #acacac;
+  border-radius: 5px;
+  padding: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+.productFormInput > textarea {
+  resize: vertical;
+  height: 250px;
+}
+
+.productTypes {
+  display: flex;
+  align-items: center;
+}
+.productTypes > .productFormInput {
+  margin: 0 0.5rem;
+  width: 100%;
+}
+
+.productImages {
+  padding: 0.6rem;
+  width: 100vmin;
+}
+.productImages > p {
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: #636363;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.productFormFile > input {
+  width: 100%;
+}
+.productFormFile > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 1;
+  height: 2rem;
+  border: none;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.5s;
+  background: #808000;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+.productFormFile > input::file-selector-button:hover {
+  background: none;
+  color: #808000;
+  border: 1px solid #808000;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.productImagesPreview {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.productImagesPreview img {
+  width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+  padding: 0.2rem;
+}
+
+.addProductBtn {
+  margin-top: 3rem !important;
+  border: none !important;
+  background: #808000 !important;
+  color: white !important;
+  font-family: Raleway !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  width: 100% !important;
+  transition: all 0.5s !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  border: 1px solid #808000 !important;
+}
+.addProductBtn:hover {
+  background: none !important;
+  color: #808000 !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+}

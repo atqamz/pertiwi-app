@@ -1,0 +1,136 @@
+.userRoleForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userRoleForm select {
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: #636363;
+  outline: none !important;
+  border: 1px solid #acacac;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.updateRoleBtn {
+  background: #808000;
+  border-radius: 5px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid #808000;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  margin-left: 10px;
+}
+
+.updateRoleBtn:hover {
+  background: none;
+  color: #808000;
+}
+
+.updateRoleBtn:disabled {
+  background: none;
+  color: white;
+}
+
+.userInfoBox {
+  display: flex;
+  justify-content: center;
+}
+
+.userInfoBox > div {
+  background: rgba(247, 247, 239, 0.47);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.userInfoBox > div > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.userInfoBox > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.userInfoBox > div hr {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.userInfoBox h2 {
+  font-family: Oswald;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.userInfoPanel {
+  background: #ffffff;
+  box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.05), 0px 5px 16px rgba(0, 0, 0, 0.035);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.userInfoPanel h3 {
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #acacac;
+}
+
+.userInfoPanel p {
+  font-family: Nunito Sans;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.userInfoPanel > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.userInfoBox > div:first-child > .userInfoPanel {
+  display: flex;
+  align-items: center;
+}
+
+.userInfoBox > div:last-child h2 {
+  color: #636363;
+}
+
+.twoContent {
+  display: flex;
+}
+
+.twoContent > div:first-child {
+  margin-right: 0.5rem;
+}
+.twoContent > div:last-child {
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,210 @@
+.emptyCartPage {
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.2) 12.4%,
+    rgba(128, 128, 0, 0) 100%
+  );
+}
+
+.emptyCartContainer {
+  height: calc(100vmin - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyCartContainer > img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.emptyCartContainer > h1 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.emptyCartContainer > a {
+  background: #808000;
+  border-radius: 5px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 1px solid #808000;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  margin-top: 1rem;
+}
+
+.emptyCartContainer > a:hover {
+  background: none !important;
+  color: #808000;
+}
+
+.cartPage {
+  padding: 2% 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.16) -3.21%,
+    rgba(128, 128, 0, 0) 54.13%
+  );
+  display: flex;
+  font-family: Nunito Sans;
+  font-weight: 800;
+}
+.cartPage > div {
+  padding: 0 3%;
+}
+.cartPage > div:first-child {
+  flex: 65%;
+  border-right: 3px solid #808000;
+}
+.cartPage > div:last-child {
+  flex: 35%;
+}
+
+.cartPage > div > h1 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.cartHeader {
+  display: grid;
+  grid-template-columns: 5fr 2fr 3fr 0.5fr;
+  width: 100%;
+  margin: auto;
+  color: white;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: #636363;
+  padding: 1rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.cartHeader > p:nth-child(2) {
+  text-align: center;
+}
+
+.cartContainer {
+  display: grid;
+  grid-template-columns: 5fr 2fr 3fr 0.5fr;
+  width: 100%;
+  margin: auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  padding: 0.5rem 0;
+}
+
+.productInfo {
+  display: flex;
+  text-decoration: none;
+  color: #1a1a1a;
+  align-items: center;
+}
+.productInfo > img {
+  width: 150px;
+  height: 150px;
+  object-fit: scale-down;
+  border-radius: 5px;
+}
+.productInfoDetail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.cartContainer > .productQty {
+  justify-content: center;
+}
+
+.productSubtotal {
+  margin: auto 0;
+}
+
+.productDelete {
+  margin: auto;
+}
+
+.cartSummaryHeader {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  width: 100%;
+  margin: auto;
+  color: white;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: #636363;
+  padding: 1rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+.cartSummaryHeader > p:last-child {
+  text-align: right;
+}
+
+.cartSummaryList > div {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  width: 100%;
+  margin: auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  padding: 0.8rem 1rem;
+}
+.cartSummaryList > div > p:last-child {
+  text-align: right;
+}
+
+.cartSummaryTotal {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: #f7f7ef;
+}
+.cartSummaryTotal > h3:last-child {
+  text-align: right;
+}
+
+.cartPage > div:last-child button {
+  width: 100%;
+  background: #808000;
+  border-radius: 5px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 1px solid #808000;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  margin-top: 1rem;
+}
+
+.cartPage > div:last-child button:hover {
+  background: none;
+  color: #808000;
+}

@@ -1,0 +1,50 @@
+.orderSuccess {
+  margin: auto;
+  text-align: center;
+  padding: 10vmax;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.orderSuccess > svg {
+  font-size: 7rem;
+  color: #808000;
+}
+.orderSuccess > p {
+  font-size: 2rem;
+}
+.orderSuccess > a {
+  background: #808000;
+  border-radius: 5px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 1px solid #808000;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  margin-top: 1rem;
+}
+
+.orderSuccess > a:hover {
+  background: none;
+  color: #808000;
+}
+
+@media screen and (max-width: 768px) {
+  .orderSuccess > svg {
+    font-size: 20vw;
+  }
+  .orderSuccess > p {
+    margin: 2vmax;
+    font-size: 5vw;
+  }
+}

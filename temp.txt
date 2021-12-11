@@ -1,0 +1,42 @@
+<Carousel
+            className='productSlide'
+            autoplay={false}
+            indicators={false}
+            navButtonsAlwaysVisible={true}
+            navButtonsProps={{
+              style: { padding: 0, color: "#808000", background: "#fff" },
+            }}
+          >
+            <div className='productSlideContent'>
+              <div className='productCard'>
+                <img
+                  src='https://static.wixstatic.com/media/2d8f27_ba3e396ba42d439e9eaf07587aaa55ea~mv2.jpg/v1/fill/w_297,h_297,al_c,q_80,usm_0.66_1.00_0.01/2d8f27_ba3e396ba42d439e9eaf07587aaa55ea~mv2.webp'
+                  alt=''
+                />
+                <h2>TES</h2>
+                <p>tes</p>
+
+                <button className='CheckButton'>Check it out!</button>
+              </div>
+              <div>
+                <img
+                  src='https://static.wixstatic.com/media/2d8f27_ba3e396ba42d439e9eaf07587aaa55ea~mv2.jpg/v1/fill/w_297,h_297,al_c,q_80,usm_0.66_1.00_0.01/2d8f27_ba3e396ba42d439e9eaf07587aaa55ea~mv2.webp'
+                  alt=''
+                />
+                <h2>TES</h2>
+                <p>tes</p>
+
+                <button className='CheckButton'>Check it out!</button>
+              </div>
+              <div>
+                <img
+                  src='https://static.wixstatic.com/media/2d8f27_ba3e396ba42d439e9eaf07587aaa55ea~mv2.jpg/v1/fill/w_297,h_297,al_c,q_80,usm_0.66_1.00_0.01/2d8f27_ba3e396ba42d439e9eaf07587aaa55ea~mv2.webp'
+                  alt=''
+                />
+                <h2>TES</h2>
+                <p>tes</p>
+
+                <button className='CheckButton'>Check it out!</button>
+              </div>
+            </div>
+          </Carousel>

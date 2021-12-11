@@ -1,0 +1,41 @@
+.createOrderPage {
+  padding: 2% 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 128, 0, 0.16) -3.21%,
+    rgba(128, 128, 0, 0) 54.13%
+  );
+  display: flex;
+  font-family: Nunito Sans;
+  font-weight: 800;
+}
+
+.createOrderPage > div {
+  padding: 0 3%;
+}
+.createOrderPage > div:first-child {
+  flex: 65%;
+  border-right: 3px solid #808000;
+}
+.createOrderPage > div:last-child {
+  flex: 35%;
+}
+
+.createOrderPage > div > h1 {
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.shippingInformation > div {
+  display: grid;
+  grid-template-columns: 0.2fr 0.02fr 1fr;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.shippingInformation > div > p {
+  word-wrap: break-word;
+}

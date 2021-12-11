@@ -1,0 +1,14 @@
+.speedDial {
+  margin-top: 10px;
+}
+
+.speedDial > .MuiFab-root {
+  width: 0;
+  height: 0;
+}
+
+.speedDialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
