@@ -63,3 +63,19 @@
   letter-spacing: 0.04em;
   color: #000000;
 }
+
+@media screen and (max-width: 768px) {
+  .storyDetail {
+    flex-direction: column;
+  }
+  .storyDetail > img {
+    margin-bottom: 1rem;
+  }
+  .storyDetail > ul {
+    margin: 0;
+  }
+  .storyDetail > ul li {
+    text-align: center;
+    list-style: none;
+  }
+}

@@ -1,0 +1,349 @@
+.sectionOnePage {
+  background: linear-gradient(
+    177.26deg,
+    rgba(128, 128, 0, 0.72) -21.61%,
+    rgba(128, 128, 0, 0.65) -21.59%,
+    rgba(128, 128, 0, 0.91) 30.97%
+  );
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  max-width: 100%;
+  z-index: 1;
+}
+.sectionOnePage > img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.sectionOneContainer {
+  padding: 0 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 140px);
+}
+
+.sectionOneHeader {
+  margin-bottom: 3rem;
+}
+
+.sectionOneHeader > h1 {
+  font-family: Oswald;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 7rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.sectionOneHeader > p {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.sectionOneCTA {
+  margin: 3rem 0 0 0;
+}
+.sectionOneCTA > a {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background: #e0d67a;
+  border-radius: 5px;
+  box-shadow: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.15));
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.sectionOneValue {
+  position: absolute;
+  width: 100%;
+  bottom: -140px;
+}
+.sectionOneValueContainer {
+  background: #ebe5ba;
+  border-radius: 21px;
+  margin: 0 5%;
+  padding: 3% 1%;
+}
+.sectionOneValueContainer > h1 {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.sectionOneValueContainer > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 0 0;
+}
+
+.valueInfo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.valueInfo > img {
+  width: 85px;
+  height: 85px;
+  margin-right: 2rem;
+}
+
+.valueInfo > p {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.valueInfo:nth-child(2) {
+  border-left: 3px solid #735c5d;
+  border-right: 3px solid #735c5d;
+}
+
+.sectionTwoPage {
+  position: relative;
+  background: #f7f7ef;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  max-width: 100%;
+}
+.sectionTwoPage > img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sectionTwoContainer {
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 140px);
+  margin-top: 140px;
+}
+
+.sectionTwoCTA {
+  flex: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sectionTwoCTA > h1 {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 47px;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+.sectionTwoCTA > p {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  margin: 1rem 0;
+}
+
+.sectionTwoBtn {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.sectionTwoBtn a {
+  transition: all 0.5s;
+  border-radius: 5px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 1px solid #808000;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: none;
+  color: #808000;
+  margin-right: 2rem;
+}
+
+.sectionTwoBtn a:hover,
+.sectionTwoBtn a:active {
+  background: #808000;
+  color: #ffffff;
+}
+
+.sectionTwoProductPreview {
+  flex: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.productCardHome {
+  padding: 1rem;
+  background: #f7f7f7;
+  border-radius: 5px;
+  transition: all 0.5s;
+  z-index: 5;
+}
+.productCardHome:hover {
+  box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.05), 0px 5px 16px rgba(0, 0, 0, 0.035);
+}
+.productCardHome > img {
+  border-radius: 5px;
+  width: 250px;
+  height: 250px;
+  object-fit: scale-down;
+}
+.productCardHome > h2 {
+  font-family: Oswald;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.productCardHome > p {
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #2f7550;
+}
+
+.sectionThreePage {
+  background: rgba(165, 127, 129, 0.15);
+  position: relative;
+  width: 100vw;
+  height: calc(50vh - 60px);
+  max-width: 100%;
+  z-index: 1;
+}
+.sectionThreePage > img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  padding: 2% 0;
+}
+
+.sectionThreeContainer {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-top: 1px solid #a57f81;
+}
+
+.sectionThreeContainer > h1 {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 47px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #1a1a1a;
+}
+.sectionThreeContainer > p {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #1a1a1a;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .sectionOnePage {
+    height: auto;
+  }
+
+  .sectionOneHeader {
+    margin-top: 3rem;
+  }
+
+  .sectionOneValue {
+    position: relative;
+  }
+
+  .sectionOneValueContainer {
+    margin: 0 10%;
+  }
+  .sectionOneValueContainer > div {
+    flex-direction: column;
+  }
+
+  .valueInfo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .valueInfo > img {
+    margin: 0.5rem 0;
+  }
+
+  .valueInfo:nth-child(2) {
+    border: none;
+  }
+
+  .sectionTwoContainer {
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .sectionTwoProductPreview {
+    display: none;
+  }
+}

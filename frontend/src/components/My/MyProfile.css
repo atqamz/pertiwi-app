@@ -40,10 +40,16 @@
   border-bottom: 3px solid #808000;
 }
 
+.profileDetail > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profileDetail > div:first-child > img {
   border-radius: 100%;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 .profileDetail > div > h1 {
@@ -68,28 +74,28 @@
 .profileDetail > div:nth-child(2) > div {
   display: flex;
 }
-.profileDetail > div:nth-child(2) > div > div:nth-child(1) {
-  margin-right: 0.5rem;
-}
+
 .profileDetail > div:nth-child(2) > div > div:nth-child(2) {
   margin-left: 0.5rem;
+}
+.profileDetail > div:nth-child(2) > div:last-child > div {
+  width: 100%;
 }
 
 .profileBtnContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .profileBtn {
   text-decoration: none;
   border: none;
   background: #808000;
-  color: white;
+  color: #ffffff;
   font-family: Raleway;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #ffffff;
   transition: all 0.5s;
   border-radius: 5px;
   outline: none;
@@ -100,14 +106,31 @@
 }
 a.profileBtn {
   color: #808000;
-  background: white;
+  background: none;
+  font-family: Raleway;
 }
 
 .profileBtn:hover {
   color: #808000;
-  background: white;
+  background: none;
 }
 a.profileBtn:hover {
   background: #808000;
-  color: white;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+  .profileDetail {
+    flex-direction: column;
+  }
+  .profileDetail > div {
+    margin: 1rem 0;
+  }
+
+  .profileDetail > div:nth-child(2) > div {
+    flex-direction: column;
+  }
+  .profileDetail > div:nth-child(2) > div > .authFormInput {
+    margin: 0 !important;
+  }
 }

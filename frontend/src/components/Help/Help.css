@@ -65,6 +65,10 @@
   margin-left: 3rem;
 }
 
+.helpSection > ul li {
+  max-width: 80%;
+}
+
 .helpSection > ul li:nth-child(1) {
   font-family: Nunito Sans;
   font-weight: bold;
@@ -118,4 +122,24 @@
 
 .productReturnTerm div:last-child > p {
   flex: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .helpSection {
+    text-align: center;
+  }
+
+  .helpSection > ul {
+    margin: 0;
+  }
+  .helpSection > ul li {
+    list-style: none;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .productReturnTerm div {
+    flex-direction: column;
+  }
 }

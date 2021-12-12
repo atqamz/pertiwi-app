@@ -1,6 +1,6 @@
 import "./Footer.css";
 import React, { Fragment } from "react";
-import { Mail, Chat, Instagram, Copyright } from "@mui/icons-material";
+import { Mail, Instagram, Copyright } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -18,10 +18,6 @@ const Footer = () => {
         <div className='lowerFooter'>
           <div>
             <h2>Contact</h2>
-            <p>
-              <Chat />
-              +62 812 0000 0000
-            </p>
             <p>
               <Mail />
               pertiwipads.official@gmail.com
@@ -48,7 +44,7 @@ const Footer = () => {
       </div>
       <div className='copyrightFooter'>
         <p>
-          <Copyright /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <Copyright /> Copyright 2021 Pertiwi, All rights reserved.
         </p>
       </div>
     </Fragment>

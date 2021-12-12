@@ -31,12 +31,13 @@
 
 .productAccordion {
   box-shadow: none !important;
+  background: none !important;
 }
 .productAccordion::before {
   height: 0 !important;
 }
 .productAccordion .MuiAccordionSummary-root {
-  background: rgba(165, 127, 129, 0.11) !important;
+  background: #80800010 !important;
 }
 
 .productDetail hr {
@@ -52,20 +53,20 @@
 }
 .productDetail > h2 {
   font-family: Oswald;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   color: #2f7550;
 }
 
 .productInteract > div {
-  width: 100%;
+  width: 60%;
   margin: 1rem 0;
 }
 
 .productInteract > div > label {
   font-family: Nunito Sans;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   letter-spacing: 0.04em;
   color: #636363;
   padding: 5px;
@@ -74,7 +75,7 @@
 .productInteract > div > select {
   width: 100%;
   font-family: Nunito Sans;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 0.04em;
@@ -83,7 +84,7 @@
   border: 1px solid #acacac;
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 5px;
+  padding: 0.5rem;
 }
 
 .productQty {
@@ -108,23 +109,46 @@
 .addToCartBtn {
   margin-bottom: 2rem !important;
   border: none !important;
-  background: #808000 !important;
-  color: white !important;
   font-family: Raleway !important;
   font-weight: 800 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
-  color: #ffffff !important;
   transition: all 0.5s !important;
   border-radius: 5px !important;
   outline: none !important;
   border: 1px solid #808000 !important;
   padding: 0.5rem 1.7rem !important;
-  width: 100% !important;
+  width: 60% !important;
   box-sizing: border-box !important;
-}
-.addToCartBtn:hover {
+  font-size: 1.2rem !important;
   background: none !important;
   color: #808000 !important;
+}
+.addToCartBtn:hover,
+.addToCartBtn:active {
+  background: #808000 !important;
+  color: #ffffff !important;
   border-radius: 5px !important;
+}
+
+.multiline {
+  white-space: pre-wrap;
+}
+
+@media screen and (max-width: 992px) {
+  .productDetailPage {
+    flex-direction: column;
+  }
+  .productDetail {
+    text-align: center;
+  }
+  .productInteract {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productAccordion {
+    text-align: left;
+  }
 }

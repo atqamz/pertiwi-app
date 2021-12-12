@@ -22,7 +22,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(-25px);
 }
 .upperFooter > ul > li {
   font-family: Nunito Sans;
@@ -38,8 +37,8 @@
   z-index: 2;
   background: linear-gradient(
     180deg,
-    rgba(128, 128, 0, 0) 30.93%,
-    rgba(128, 128, 0, 0.25) 217.47%
+    rgba(128, 128, 0, 0) 50.15%,
+    rgba(128, 128, 0, 0.6) 217.47%
   );
   margin: 0 -9999rem;
   padding: 5% calc(5% + 9999rem);
@@ -104,4 +103,25 @@
 }
 .copyrightFooter > p > svg {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .lowerFooter {
+    flex-direction: column;
+  }
+  .lowerFooter > div:nth-child(1) {
+    text-align: center;
+  }
+  .lowerFooter > div:nth-child(1) p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lowerFooter > div:nth-child(2) {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .lowerFooter > div:nth-child(3) {
+    text-align: center;
+  }
 }

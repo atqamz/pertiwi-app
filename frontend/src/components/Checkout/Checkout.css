@@ -75,7 +75,6 @@
 
 .shippingBtn {
   width: 100%;
-  background: #808000;
   border-radius: 5px;
   font-family: Raleway;
   font-weight: 800;
@@ -84,21 +83,49 @@
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #ffffff;
   text-decoration: none;
   padding: 1rem 2rem;
   border: 1px solid #808000;
   box-sizing: border-box;
   transition: all 0.5s;
   margin-top: 1rem;
-}
-
-.shippingBtn:hover {
   background: none;
   color: #808000;
+}
+
+.shippingBtn:hover,
+.shippingBtn:active {
+  background: #808000;
+  color: #ffffff;
 }
 
 .shippingBtn:disabled {
   background: none;
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .shippingForm {
+    flex-direction: column;
+  }
+  .shippingForm > div:first-child {
+    flex: 65%;
+    border-right: none;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shippingForm h1 {
+    margin-bottom: 1rem;
+  }
+
+  .twoInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .twoInput > .shippingFormInput {
+    margin: 0 !important;
+  }
 }

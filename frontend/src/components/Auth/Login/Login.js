@@ -23,6 +23,15 @@ const Login = ({ history, location }) => {
     password: "",
   });
 
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1200);
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1200);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   const redirect = location.search ? location.search.split("=")[1] : "/";
   useEffect(() => {
     if (error) {
@@ -53,7 +62,7 @@ const Login = ({ history, location }) => {
       ) : (
         <Fragment>
           <div className='authPage'>
-            <Sideview />
+            {isDesktop && <Sideview />}
 
             <div className='authContainer'>
               <div className='authCTA'>

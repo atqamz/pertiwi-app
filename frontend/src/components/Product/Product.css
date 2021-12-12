@@ -19,7 +19,7 @@
 }
 
 .productSlider {
-  margin: 3%;
+  margin: 5%;
 }
 
 .productDetailSlider img {
@@ -71,22 +71,22 @@
 .goToProductBtn {
   margin-top: 3rem !important;
   border: none !important;
-  background: #808000 !important;
-  color: white !important;
   font-family: Raleway !important;
   font-weight: 800 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
-  color: #ffffff !important;
   transition: all 0.5s !important;
   border-radius: 5px !important;
   outline: none !important;
   border: 1px solid #808000 !important;
   padding: 0.5rem 1.7rem !important;
-}
-.goToProductBtn:hover {
   background: none !important;
   color: #808000 !important;
+}
+.goToProductBtn:hover,
+.goToProductBtn:active {
+  background: #808000 !important;
+  color: #ffffff !important;
   box-sizing: border-box !important;
   border-radius: 5px !important;
 }

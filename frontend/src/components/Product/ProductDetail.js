@@ -154,7 +154,7 @@ const ProductDetail = ({ match }) => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>{product.description}</Typography>
+                  <Typography className='multiline'>{product.description}</Typography>
                 </AccordionDetails>
               </Accordion>
 
@@ -185,7 +185,7 @@ const ProductDetail = ({ match }) => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>{product.ingredient}</Typography>
+                  <Typography className='multiline'>{product.ingredient}</Typography>
                 </AccordionDetails>
               </Accordion>
             </div>

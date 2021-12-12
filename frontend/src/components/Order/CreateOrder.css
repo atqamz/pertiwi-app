@@ -39,3 +39,29 @@
 .shippingInformation > div > p {
   word-wrap: break-word;
 }
+
+@media screen and (max-width: 1200px) {
+  .createOrderPage {
+    flex-direction: column;
+  }
+  .createOrderPage > div:first-child {
+    flex: 65%;
+    border-right: none;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .createOrderPage h1 {
+    margin: 1rem 0;
+  }
+
+  .twoInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .twoInput > .shippingFormInput {
+    margin: 0 !important;
+  }
+}

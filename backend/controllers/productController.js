@@ -96,6 +96,8 @@ exports.adminCreateProduct = catchAsyncError(async (req, res, next) => {
 
   req.body.images = imagesAfter;
   req.body.user = req.user._id;
+  // req.body.description = JSON.parse(req.body.description);
+  // req.body.ingridient = JSON.parse(req.body.ingridient);
   req.body.productTypes = JSON.parse(req.body.productTypes);
 
   await Product.create(req.body);

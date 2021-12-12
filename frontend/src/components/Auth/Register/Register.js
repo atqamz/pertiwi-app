@@ -30,6 +30,15 @@ const Login = ({ history, location }) => {
     avatar: imageprofile,
   });
 
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1200);
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1200);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   const redirect = location.search ? location.search.split("=")[1] : "/";
   useEffect(() => {
     if (error) {
@@ -71,7 +80,7 @@ const Login = ({ history, location }) => {
       ) : (
         <Fragment>
           <div className='authPage'>
-            <Sideview />
+            {isDesktop && <Sideview />}
 
             <div className='authContainer'>
               <div className='authCTA'>
@@ -81,8 +90,8 @@ const Login = ({ history, location }) => {
               </div>
 
               <div className='authBox'>
-                <h1>Welcome Back!</h1>
-                <p>Please enter your details to continue.</p>
+                <h1>Welcome!</h1>
+                <p>Create your account.</p>
 
                 <form className='authForm' onSubmit={registerSubmitHandler}>
                   <div className='authFormInput'>
