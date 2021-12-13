@@ -125,18 +125,20 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className='sectionTwoProductPreview'>
-                {products && (
-                  <ProductCard
-                    product={products[Math.floor(Math.random() * products.length)]}
-                  />
-                )}
-                {products && (
-                  <ProductCard
-                    product={products[Math.floor(Math.random() * products.length)]}
-                  />
-                )}
-              </div>
+              {products.length > 0 && (
+                <div className='sectionTwoProductPreview'>
+                  {products && (
+                    <ProductCard
+                      product={products[Math.floor(Math.random() * products.length)]}
+                    />
+                  )}
+                  {products && (
+                    <ProductCard
+                      product={products[Math.floor(Math.random() * products.length)]}
+                    />
+                  )}
+                </div>
+              )}
             </div>
           </div>
           <div className='sectionThreePage'>
