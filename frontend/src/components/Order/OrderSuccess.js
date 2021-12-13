@@ -12,7 +12,7 @@ const OrderSuccess = () => {
         You can't ordered yet. But we will confirm your orders and let you get the further
         information.
       </Typography>
-      <Link to='/orders'>View Order(s)</Link>
+      <Link to='/order/me'>View Order(s)</Link>
     </div>
   );
 };

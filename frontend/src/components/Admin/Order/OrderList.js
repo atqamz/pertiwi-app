@@ -1,18 +1,17 @@
-import "./MyOrder.css";
 import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAlert } from "react-alert";
 
 import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, myOrders } from "../../_actions/orderAction";
+import { clearErrors, adminGetAllOrders } from "../../../_actions/orderAction";
 
-import Loading from "../layout/Loading/Loading";
+import Loading from "../../layout/Loading/Loading";
 
-const MyOrder = () => {
+const OrderList = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
 
-  const { loading, error, orders } = useSelector((state) => state.ordersState);
+  const { loading, error, orders } = useSelector((state) => state.adminOrdersState);
 
   useEffect(() => {
     if (error) {
@@ -20,7 +19,7 @@ const MyOrder = () => {
       dispatch(clearErrors());
     }
 
-    dispatch(myOrders());
+    dispatch(adminGetAllOrders());
   }, [dispatch, error, alert]);
 
   return (
@@ -29,9 +28,9 @@ const MyOrder = () => {
         <Loading />
       ) : (
         <Fragment>
-          <div className='myOrderPage'>
-            <div className='myOrderContainer'>
-              <h1>My Order(s)</h1>
+          <div>
+            <div className='dashboardContainer'>
+              <h1>Order</h1>
 
               <div className='myOrderHeader'>
                 <p>Order ID</p>
@@ -40,7 +39,7 @@ const MyOrder = () => {
 
               {orders &&
                 orders.map((order) => (
-                  <Link to={`/order/${order._id}`} className='myOrderList'>
+                  <Link to={`/admin/order/${order._id}`} className='myOrderList'>
                     <p>{order._id}</p>
                     <p>
                       {order.totalPrice.toLocaleString("en-US", {
@@ -58,4 +57,4 @@ const MyOrder = () => {
   );
 };
 
-export default MyOrder;
+export default OrderList;

@@ -183,10 +183,16 @@ const ProductList = ({ history }) => {
       flex: 0.3,
     },
     {
+      field: "views",
+      headerName: "Views",
+      type: "Number",
+      flex: 0.3,
+    },
+    {
       field: "actions",
       headerName: "Actions",
       type: "Number",
-      flex: 0.3,
+      flex: 0.1,
       sortable: false,
       renderCell: (params) => {
         return (
@@ -220,6 +226,7 @@ const ProductList = ({ history }) => {
         id: product._id,
         name: product.name,
         stock: totalStock,
+        views: product.views,
       });
     });
 

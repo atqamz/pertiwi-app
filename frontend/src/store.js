@@ -15,9 +15,10 @@ import {
   adminProductReducer,
 } from "./_reducers/productReducer";
 import {
-  adminOrdersReducer,
-  orderReducer,
   ordersReducer,
+  orderReducer,
+  adminOrdersReducer,
+  adminOrderReducer,
 } from "./_reducers/orderReducer";
 // ===============
 
@@ -32,6 +33,7 @@ const reducer = combineReducers({
   adminUsersState: adminUsersReducer,
   adminUserState: adminUserReducer,
   adminOrdersState: adminOrdersReducer,
+  adminOrderState: adminOrderReducer,
 });
 
 const initialState = {

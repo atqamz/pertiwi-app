@@ -17,11 +17,11 @@ const UserOption = ({ user, isAuth }) => {
   const dashboard = () => {
     history.push("/admin/dashboard");
   };
-  const order = () => {
-    history.push("/order");
-  };
   const profile = () => {
     history.push("/me");
+  };
+  const order = () => {
+    history.push("/order/me");
   };
   const userLogin = () => {
     history.push("/login");

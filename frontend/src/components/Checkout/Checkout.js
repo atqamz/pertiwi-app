@@ -84,7 +84,6 @@ const Checkout = ({ history }) => {
                 required
                 value={shipping.province}
                 onChange={onChangeHandler}
-                disabled={shipping.country ? false : true}
               >
                 <option value='' disabled selected>
                   Choose your province
@@ -107,7 +106,6 @@ const Checkout = ({ history }) => {
                 required
                 value={shipping.city}
                 onChange={onChangeHandler}
-                disabled={shipping.province ? false : true}
               >
                 <option value='' disabled selected>
                   Choose your city
@@ -131,7 +129,6 @@ const Checkout = ({ history }) => {
                 required
                 value={shipping.postCode}
                 onChange={onChangeHandler}
-                disabled={shipping.city ? false : true}
               />
             </div>
           </div>

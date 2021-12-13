@@ -13,6 +13,12 @@ import {
   ADMIN_GET_ALL_ORDERS_REQUEST,
   ADMIN_GET_ALL_ORDERS_SUCCESS,
   ADMIN_GET_ALL_ORDERS_FAIL,
+  ADMIN_UPDATE_ORDER_REQUEST,
+  ADMIN_UPDATE_ORDER_SUCCESS,
+  ADMIN_UPDATE_ORDER_FAIL,
+  ADMIN_DELETE_ORDER_REQUEST,
+  ADMIN_DELETE_ORDER_SUCCESS,
+  ADMIN_DELETE_ORDER_FAIL,
 } from "../_constants/orderConstant";
 
 // Create Order
@@ -80,6 +86,36 @@ export const adminGetAllOrders = () => async (dispatch) => {
       type: ADMIN_GET_ALL_ORDERS_FAIL,
       payload: error.response.data.message,
     });
+  }
+};
+
+// Update Order -- Admin
+export const adminUpdateOrder = (orderId, orderData) => async (dispatch) => {
+  try {
+    dispatch({ type: ADMIN_UPDATE_ORDER_REQUEST });
+
+    const config = {
+      headers: { "Content-Type": "application/json" },
+    };
+
+    const { data } = await axios.put(`/api/admin/order/${orderId}`, orderData, config);
+
+    dispatch({ type: ADMIN_UPDATE_ORDER_SUCCESS, payload: data.success });
+  } catch (error) {
+    dispatch({ type: ADMIN_UPDATE_ORDER_FAIL, payload: error.response.data.message });
+  }
+};
+
+// Delete Order -- Admin
+export const adminDeleteOrder = (orderId) => async (dispatch) => {
+  try {
+    dispatch({ type: ADMIN_DELETE_ORDER_REQUEST });
+
+    const { data } = await axios.delete(`/api/admin/order/${orderId}`);
+
+    dispatch({ type: ADMIN_DELETE_ORDER_SUCCESS, payload: data.success });
+  } catch (error) {
+    dispatch({ type: ADMIN_DELETE_ORDER_FAIL, payload: error.response.data.message });
   }
 };
 

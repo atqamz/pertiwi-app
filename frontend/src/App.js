@@ -29,8 +29,9 @@ import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
 import CreateOrder from "./components/Order/CreateOrder";
 import OrderSuccess from "./components/Order/OrderSuccess";
-import MyProfile from "./components/My/MyProfile.js";
+import MyProfile from "./components/My/MyProfile";
 import MyOrder from "./components/My/MyOrder";
+import MyOrderDetail from "./components/My/MyOrderDetail";
 
 import AdminSidebar from "./components/layout/Admin/AdminSidebar/AdminSidebar";
 import AdminTopbar from "./components/layout/Admin/AdminTopbar/AdminTopbar";
@@ -39,6 +40,8 @@ import ProductList from "./components/Admin/Product/ProductList";
 import ProductUpdate from "./components/Admin/Product/ProductUpdate";
 import UserList from "./components/Admin/User/UserList";
 import UserUpdate from "./components/Admin/User/UserUpdate";
+import OrderList from "./components/Admin/Order/OrderList";
+import OrderUpdate from "./components/Admin/Order/OrderUpdate";
 
 function App() {
   ReactGA.initialize("UA-215036295-1");
@@ -102,6 +105,12 @@ function App() {
         <ProtectedRoute path='/order/me' component={MyOrder} metadata='My Order' />
 
         <ProtectedRoute
+          path='/order/:orderId'
+          component={MyOrderDetail}
+          metadata='My Order'
+        />
+
+        <ProtectedRoute
           path='/password/update'
           component={UpdatePassword}
           metadata='Update Password'
@@ -127,6 +136,9 @@ function App() {
 
                     <Route path={`${url}/products`} component={ProductList} />
                     <Route path={`${url}/product/:productId`} component={ProductUpdate} />
+
+                    <Route path={`${url}/orders`} component={OrderList} />
+                    <Route path={`${url}/order/:orderId`} component={OrderUpdate} />
 
                     <Route path={`${url}/users`} component={UserList} />
                     <Route path={`${url}/user/:userId`} component={UserUpdate} />

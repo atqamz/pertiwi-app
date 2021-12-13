@@ -108,6 +108,18 @@ exports.adminCreateProduct = catchAsyncError(async (req, res, next) => {
 
 // Update Product -- Admin
 exports.adminUpdateProduct = catchAsyncError(async (req, res, next) => {
+  if (req.body.views) {
+    await Product.findByIdAndUpdate(req.params.productId, req.body, {
+      new: true,
+      runValidator: false,
+      useFindAndModify: false,
+    });
+
+    res.status(200).json({
+      success: true,
+    });
+  }
+
   let product = await Product.findById(req.params.productId);
 
   if (!product) {

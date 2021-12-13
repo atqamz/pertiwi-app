@@ -26,7 +26,7 @@ const CreateOrder = ({ history }) => {
   const handleCreateOrder = () => {
     const order = {
       shippingInfo,
-      orderItems: cartItems.forEach((item) => ({
+      orderItems: cartItems.map((item) => ({
         product: item.product,
         name: item.name,
         productType: item.productType.typeName,

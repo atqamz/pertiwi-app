@@ -145,7 +145,7 @@ const Home = () => {
               <h1>Let's bring the impact with Pertiwi</h1>
               <p>
                 Pertiwi want to be a big step in business waste handling plastic in
-                Indonesia, and want to improve women's welfare
+                Indonesia, and want <br /> to improve women's welfare
               </p>
             </div>
           </div>

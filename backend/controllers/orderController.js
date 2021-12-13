@@ -50,7 +50,10 @@ exports.getMyOrders = catchAsyncError(async (req, res, next) => {
 
 // Get Order
 exports.getOrder = catchAsyncError(async (req, res, next) => {
-  const order = await Order.findById(req.params.orderId).populate("user", "name email");
+  const order = await Order.findById(req.params.orderId).populate(
+    "user",
+    "name email phone"
+  );
 
   if (!order) {
     return next(new ErrorHandler("Order not found.", 404));

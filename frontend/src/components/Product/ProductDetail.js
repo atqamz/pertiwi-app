@@ -1,5 +1,6 @@
 import "./ProductDetail.css";
 import React, { Fragment, useEffect, useState } from "react";
+import axios from "axios";
 import { useAlert } from "react-alert";
 import {
   Accordion,
@@ -22,18 +23,26 @@ const ProductDetail = ({ match }) => {
   const alert = useAlert();
   const dispatch = useDispatch();
   const { loading, error, product } = useSelector((state) => state.productState);
+  const { user } = useSelector((state) => state.userState);
 
   useEffect(() => {
     if (!product || (product && product._id !== match.params.productId)) {
       dispatch(getProduct(match.params.productId));
     } else {
       setProductType(product.productTypes[0]);
+
+      if (user && user.role === "admin") {
+        return;
+      }
+      axios.put(`/api/admin/product/${match.params.productId}`, {
+        views: product.views + 1,
+      });
     }
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
     }
-  }, [dispatch, error, alert, match.params.productId, product]);
+  }, [dispatch, error, alert, match.params.productId, product, user]);
 
   const [productType, setProductType] = useState({});
   const [quantity, setQuantity] = useState(1);

@@ -22,7 +22,7 @@ router.route("/admin/product/add").post(isAuth, authRoles("admin"), adminCreateP
 
 router
   .route("/admin/product/:productId")
-  .put(isAuth, authRoles("admin"), adminUpdateProduct)
+  .put(isAuth, adminUpdateProduct)
   .delete(isAuth, authRoles("admin"), adminDeleteProduct);
 // ===============
 
