@@ -44,7 +44,7 @@ import OrderList from "./components/Admin/Order/OrderList";
 import OrderUpdate from "./components/Admin/Order/OrderUpdate";
 
 function App() {
-  ReactGA.initialize("UA-215036295-1");
+  ReactGA.initialize("UA-215131408-1");
 
   const { loading, user, isAuth } = useSelector((state) => state.userState);
 

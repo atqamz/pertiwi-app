@@ -33,7 +33,7 @@ const Footer = () => {
               <img src='/logo.png' alt='Pertiwi Logo' />
               <img src='/logotext.png' alt='Pertiwi Logo Text' />
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Let's bring the impact!</p>
           </div>
 
           <div>
