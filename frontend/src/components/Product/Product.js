@@ -57,7 +57,7 @@ const Product = () => {
   const settings = {
     className: "productSlider",
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [

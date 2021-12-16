@@ -11,7 +11,7 @@ import { clearErrors, adminGetAllProducts } from "../../_actions/productAction";
 
 import Loading from "../layout/Loading/Loading";
 
-const ProductCard = ({ product }) => {
+const ProductCardHome = ({ product }) => {
   const history = useHistory();
 
   let min = product && Math.min(...product.productTypes.map((item) => item.price));
@@ -128,12 +128,12 @@ const Home = () => {
               {products.length > 0 && (
                 <div className='sectionTwoProductPreview'>
                   {products && (
-                    <ProductCard
+                    <ProductCardHome
                       product={products[Math.floor(Math.random() * products.length)]}
                     />
                   )}
                   {products && (
-                    <ProductCard
+                    <ProductCardHome
                       product={products[Math.floor(Math.random() * products.length)]}
                     />
                   )}

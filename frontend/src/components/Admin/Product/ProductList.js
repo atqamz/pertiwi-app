@@ -24,6 +24,7 @@ const ProductList = ({ history }) => {
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.allProductsState);
   const {
+    loading: adminLoading,
     error: adminError,
     isAdded,
     isDeleted,
@@ -93,10 +94,10 @@ const ProductList = ({ history }) => {
     setProductTypes(values);
   };
 
-  const handleProductImagesChange = (e) => {
+  const handleProductImagesChange = async (e) => {
     const files = Array.from(e.target.files);
 
-    files.forEach((file) => {
+    await files.forEach((file) => {
       const reader = new FileReader();
 
       reader.onload = () => {
@@ -119,12 +120,16 @@ const ProductList = ({ history }) => {
     form.set("description", product.description);
     form.set("ingredient", product.ingredient);
     form.set("productTypes", JSON.stringify(productTypes));
+    form.set("images", JSON.stringify(images));
+    // images.forEach((image) => {
+    //   form.append("images", JSON.stringify(image));
+    // });
 
-    images.forEach((image) => {
-      form.append("images", image);
-    });
+    var object = {};
+    form.forEach((value, key) => (object[key] = value));
+    var json = JSON.stringify(object);
 
-    dispatch(adminAddProduct(form));
+    dispatch(adminAddProduct(json));
   };
 
   const handleRemoveImage = (index) => {
@@ -232,7 +237,7 @@ const ProductList = ({ history }) => {
 
   return (
     <Fragment>
-      {loading ? (
+      {loading || adminLoading ? (
         <Loading />
       ) : (
         <Fragment>

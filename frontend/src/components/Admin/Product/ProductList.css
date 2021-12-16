@@ -70,7 +70,7 @@
 .productFormInput > textarea {
   font-family: Nunito Sans;
   letter-spacing: 0.04em;
-  color: #acacac;
+  color: #1a1a1a;
   border-radius: 5px;
   padding: 0.6rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -79,6 +79,12 @@
 .productFormInput > textarea {
   resize: vertical;
   height: 250px;
+}
+.productFormInput > input::placeholder,
+.productFormInput > input::-ms-input-placeholder,
+.productFormInput > textarea::placeholder,
+.productFormInput > textarea::-ms-input-placeholder {
+  color: #acacac;
 }
 
 .productTypes {

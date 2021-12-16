@@ -10,15 +10,18 @@ import {
   adminUpdateProduct,
 } from "../../../_actions/productAction";
 import { ADMIN_UPDATE_PRODUCT_RESET } from "../../../_constants/productConstant";
+import Loading from "../../layout/Loading/Loading";
 
 const ProductUpdate = ({ match, history }) => {
   const alert = useAlert();
   const dispatch = useDispatch();
 
   const { loading, error, product } = useSelector((state) => state.productState);
-  const { error: adminError, isUpdated } = useSelector(
-    (state) => state.adminProductState
-  );
+  const {
+    loading: adminLoading,
+    error: adminError,
+    isUpdated,
+  } = useSelector((state) => state.adminProductState);
 
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -90,12 +93,16 @@ const ProductUpdate = ({ match, history }) => {
     form.set("description", description);
     form.set("ingredient", ingredient);
     form.set("productTypes", JSON.stringify(productTypes));
+    form.set("images", JSON.stringify(images));
+    // images.forEach((image) => {
+    //   form.append("images", image);
+    // });
 
-    images.forEach((image) => {
-      form.append("images", image);
-    });
+    var object = {};
+    form.forEach((value, key) => (object[key] = value));
+    var json = JSON.stringify(object);
 
-    dispatch(adminUpdateProduct(productId, form));
+    dispatch(adminUpdateProduct(productId, json));
   };
 
   const handleRemoveImage = (index) => {
@@ -137,149 +144,155 @@ const ProductUpdate = ({ match, history }) => {
   };
   return (
     <Fragment>
-      <div className='dashboardContainer'>
-        <h1>Update Product</h1>
-        <div
-          className='productsTabPanel'
-          role='tabpanel'
-          id='tabpanel-1'
-          aria-labelledby='tab-1'
-        >
-          <form
-            className='addProductForm'
-            onSubmit={handleFormSubmit}
-            encType='application/json'
-          >
-            <div>
-              <div className='productFormLeft'>
-                <div className='productFormInput'>
-                  <label htmlFor='productName'>Product Name</label>
-                  <input
-                    type='text'
-                    name='name'
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </div>
-                <div className='productFormInput'>
-                  <label htmlFor='productDescription'>Description</label>
-                  <textarea
-                    type='text'
-                    name='description'
-                    required
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                  />
-                </div>
-                <div className='productFormInput'>
-                  <label htmlFor='productIngredient'>Ingredient</label>
-                  <textarea
-                    type='text'
-                    name='ingredient'
-                    required
-                    value={ingredient}
-                    onChange={(e) => setIngredient(e.target.value)}
-                  />
-                </div>
-                <Button
-                  className='addProductBtn'
-                  type='submit'
-                  disabled={loading ? true : false}
-                >
-                  Update Product
-                </Button>
-              </div>
-
-              <div className='productFormRight'>
-                <div className='productImages'>
-                  <div className='productFormFile'>
-                    <input
-                      type='file'
-                      name='images'
-                      accept='image/*'
-                      multiple
-                      onChange={handleProductImagesChange}
-                    />
-                  </div>
-                  {oldImages && oldImages.length > 0 && (
-                    <>
-                      <p>Old Images</p>
-                      <div className='productImagesPreview'>
-                        {oldImages.map((image, index) => (
-                          <img
-                            key={index}
-                            alt={`Product Preview ${index}`}
-                            src={image.url}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  )}
-                  {imagesPreview && imagesPreview.length > 0 && (
-                    <>
-                      <p>Click image to delete</p>
-                      <div className='productImagesPreview'>
-                        {imagesPreview.map((image, index) => (
-                          <img
-                            key={index}
-                            alt={`Product Preview ${index}`}
-                            src={image}
-                            onClick={() => handleRemoveImage(index)}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  )}
-                </div>
-
-                {productTypes.map((type, index) => (
-                  <div className='productTypes' key={index}>
+      {loading || adminLoading ? (
+        <Loading />
+      ) : (
+        <Fragment>
+          <div className='dashboardContainer'>
+            <h1>Update Product</h1>
+            <div
+              className='productsTabPanel'
+              role='tabpanel'
+              id='tabpanel-1'
+              aria-labelledby='tab-1'
+            >
+              <form
+                className='addProductForm'
+                onSubmit={handleFormSubmit}
+                encType='application/json'
+              >
+                <div>
+                  <div className='productFormLeft'>
                     <div className='productFormInput'>
-                      <label htmlFor='typeName'>Type</label>
+                      <label htmlFor='productName'>Product Name</label>
                       <input
                         type='text'
-                        name='typeName'
+                        name='name'
                         required
-                        value={type.typeName}
-                        onChange={(e) => handleProductTypesChange(e, index)}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                       />
                     </div>
                     <div className='productFormInput'>
-                      <label htmlFor='price'>Price</label>
-                      <input
-                        type='number'
-                        name='price'
+                      <label htmlFor='productDescription'>Description</label>
+                      <textarea
+                        type='text'
+                        name='description'
                         required
-                        value={type.price === 0 ? "" : type.price}
-                        onChange={(e) => handleProductTypesChange(e, index)}
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
                       />
                     </div>
                     <div className='productFormInput'>
-                      <label htmlFor='stock'>Stock</label>
-                      <input
-                        type='number'
-                        name='stock'
+                      <label htmlFor='productIngredient'>Ingredient</label>
+                      <textarea
+                        type='text'
+                        name='ingredient'
                         required
-                        value={type.stock === 0 ? "" : type.stock}
-                        onChange={(e) => handleProductTypesChange(e, index)}
+                        value={ingredient}
+                        onChange={(e) => setIngredient(e.target.value)}
                       />
                     </div>
-                    <div>
-                      <IconButton onClick={() => addProductType(index)}>
-                        <Add />
-                      </IconButton>
-                      <IconButton onClick={() => removeProductType(index)}>
-                        <Remove />
-                      </IconButton>
-                    </div>
+                    <Button
+                      className='addProductBtn'
+                      type='submit'
+                      disabled={loading ? true : false}
+                    >
+                      Update Product
+                    </Button>
                   </div>
-                ))}
-              </div>
+
+                  <div className='productFormRight'>
+                    <div className='productImages'>
+                      <div className='productFormFile'>
+                        <input
+                          type='file'
+                          name='images'
+                          accept='image/*'
+                          multiple
+                          onChange={handleProductImagesChange}
+                        />
+                      </div>
+                      {oldImages && oldImages.length > 0 && (
+                        <>
+                          <p>Old Images</p>
+                          <div className='productImagesPreview'>
+                            {oldImages.map((image, index) => (
+                              <img
+                                key={index}
+                                alt={`Product Preview ${index}`}
+                                src={image.url}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
+                      {imagesPreview && imagesPreview.length > 0 && (
+                        <>
+                          <p>Click image to delete</p>
+                          <div className='productImagesPreview'>
+                            {imagesPreview.map((image, index) => (
+                              <img
+                                key={index}
+                                alt={`Product Preview ${index}`}
+                                src={image}
+                                onClick={() => handleRemoveImage(index)}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                    {productTypes.map((type, index) => (
+                      <div className='productTypes' key={index}>
+                        <div className='productFormInput'>
+                          <label htmlFor='typeName'>Type</label>
+                          <input
+                            type='text'
+                            name='typeName'
+                            required
+                            value={type.typeName}
+                            onChange={(e) => handleProductTypesChange(e, index)}
+                          />
+                        </div>
+                        <div className='productFormInput'>
+                          <label htmlFor='price'>Price</label>
+                          <input
+                            type='number'
+                            name='price'
+                            required
+                            value={type.price === 0 ? "" : type.price}
+                            onChange={(e) => handleProductTypesChange(e, index)}
+                          />
+                        </div>
+                        <div className='productFormInput'>
+                          <label htmlFor='stock'>Stock</label>
+                          <input
+                            type='number'
+                            name='stock'
+                            required
+                            value={type.stock === 0 ? "" : type.stock}
+                            onChange={(e) => handleProductTypesChange(e, index)}
+                          />
+                        </div>
+                        <div>
+                          <IconButton onClick={() => addProductType(index)}>
+                            <Add />
+                          </IconButton>
+                          <IconButton onClick={() => removeProductType(index)}>
+                            <Remove />
+                          </IconButton>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
-      </div>
+          </div>
+        </Fragment>
+      )}
     </Fragment>
   );
 };

@@ -74,13 +74,12 @@ exports.adminGetAllProducts = catchAsyncError(async (req, res, next) => {
 
 // Create Product -- Admin
 exports.adminCreateProduct = catchAsyncError(async (req, res, next) => {
-  let images = [];
-  if (typeof req.body.images === "string") {
-    images.push(req.body.images);
-  } else {
-    images = req.body.images;
-  }
-
+  // let images = [];
+  // if (typeof req.body.images === "string") {
+  //   images.push(req.body.images);
+  // } else {
+  // }
+  let images = JSON.parse(req.body.images);
   let imagesAfter = [];
   for (let i = 0; i < images.length; i++) {
     const result = await cloudinary.v2.uploader.upload(images[i], {
@@ -126,18 +125,17 @@ exports.adminUpdateProduct = catchAsyncError(async (req, res, next) => {
     return next(new ErrorHandler("Product not found.", 404));
   }
 
-  let images = [];
-  if (typeof req.body.images === "string") {
-    images.push(req.body.images);
-  } else {
-    images = req.body.images;
-  }
-
+  // let images = [];
+  // if (typeof req.body.images === "string") {
+  //   images.push(req.body.images);
+  // } else {
+  //   images = req.body.images;
+  // }
+  let images = JSON.parse(req.body.images);
   if (images !== undefined) {
     for (let i = 0; i < product.images.length; i++) {
       await cloudinary.v2.uploader.destroy(product.images[i].public_id);
     }
-
     const imagesAfter = [];
     for (let i = 0; i < images.length; i++) {
       const result = await cloudinary.v2.uploader.upload(images[i], {
