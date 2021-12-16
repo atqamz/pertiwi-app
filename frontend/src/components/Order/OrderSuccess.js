@@ -9,8 +9,9 @@ const OrderSuccess = () => {
     <div className='orderSuccess'>
       <CheckCircle />
       <Typography>
-        You can't ordered yet. But we will confirm your orders and let you get the further
-        information.
+        Thank you for making the purchase process through our website, but the product is
+        currently in the development stage. We will contact you as soon as the product is
+        ready to use. Have a nice day!
       </Typography>
       <Link to='/order/me'>View Order(s)</Link>
     </div>
