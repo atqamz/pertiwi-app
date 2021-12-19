@@ -19,6 +19,8 @@
 }
 .sidebarLogo img {
   margin: 5px 0;
+  width: 100%;
+  height: auto;
 }
 
 .sidebarItems {
